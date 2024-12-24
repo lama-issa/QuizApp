@@ -1,0 +1,240 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f3f8;
+    background-image: radial-gradient(#42a5f5 0.5px, transparent 0.5px), radial-gradient(#42a5f5 0.5px, #f1f3f8 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+
+#picc {
+    position: fixed;
+    right: 10%;
+    top: 200px;
+}
+
+#picc img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.span {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 100px 0;
+    border-color: transparent #42a5f5 transparent transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.span2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 0 0 100px;
+    border-color: transparent transparent transparent #42a5f5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 480px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#numofQuestions {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f4f82;
+    background-color: #f0f4ff;
+    padding: 8px 15px;
+    border-radius: 25px;
+}
+
+#timer {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e0f7fa;
+    font-size: 22px;
+    color: #007bff;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#categoryName {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+#questions-Cont {
+    text-align: left;
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+label:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.05);
+}
+
+input {
+    margin-right: 12px;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #42a5f5;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1e88e5;
+    transform: scale(1.05);
+}
+
+button.hidden {
+    display: none;
+}
+
+.correct-answer {
+    border: 2px solid green;
+}
+
+.incorrect-answer {
+    border: 2px solid red;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For Mobile Devices */
+@media (max-width: 600px) {
+    body {
+        background-size: 15px 15px;
+    }
+
+    #picc {
+        top: 100px;
+        right: 5%;
+    }
+
+    #picc img {
+        max-width: 250px;
+    }
+
+    .quiz-container {
+        padding: 20px;
+        width: 80%;
+    }
+
+    #numofQuestions {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    #timer {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #categoryName {
+        font-size: 20px;
+    }
+
+    label {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* For Tablets */
+@media (max-width: 768px) {
+    #picc {
+        top: 150px;
+        right: 8%;
+    }
+
+    #picc img {
+        max-width: 270px;
+    }
+
+    .quiz-container {
+        padding: 25px;
+    }
+
+    #numofQuestions {
+        font-size: 16px;
+        padding: 7px 13px;
+    }
+
+    #timer {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    label {
+        padding: 11px;
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 17px;
+        padding: 11px;
+    }
+}
+
+
